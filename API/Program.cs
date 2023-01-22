@@ -14,6 +14,8 @@ builder.Services.AddControllers();
 builder.Services.AddApplicationServices(builder.Configuration);
 
 var app = builder.Build();
+
+app.UseCors("CorsPolicy");
 app.UseAuthorization();
 app.MapControllers();
 
